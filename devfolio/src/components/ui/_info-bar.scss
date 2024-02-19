@@ -1,0 +1,12 @@
+.info-bar {
+
+    color: white;
+    background-color: #18243A;
+    border-radius: 25px;
+    padding: 20px 0px;
+    & > * {
+        padding: 10px 30px;
+        text-align: center;
+    }
+
+}
