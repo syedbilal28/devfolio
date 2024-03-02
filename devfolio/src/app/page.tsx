@@ -1,7 +1,9 @@
+import { Heading } from '@/components/heading/heading'
+import { SkillsBar } from '@/components/skills/skills'
 import InfoSideBar from '@/components/ui/info-bar'
 import { Flex, Layout, Menu } from 'antd'
 import Sider from 'antd/es/layout/Sider'
-import Image from 'next/image'
+import { Content } from 'antd/es/layout/layout'
 
 export default function Home() {
   return (
@@ -9,6 +11,16 @@ export default function Home() {
         <Sider width={300} className='home-page__sider'>
           <Flex justify="center" align="center" vertical style={{"height": "100%"}}>
             <InfoSideBar/>
+          </Flex>
+        </Sider>
+        <Content>
+          <div>
+            <Heading/>
+          </div>
+        </Content>
+        <Sider width={300}>
+          <Flex justify="center" align="center" vertical style={{"height": "100%"}}>
+            <SkillsBar/>
           </Flex>
         </Sider>
     </Layout>

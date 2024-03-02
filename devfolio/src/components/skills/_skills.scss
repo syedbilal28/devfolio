@@ -1,0 +1,19 @@
+.skills-bar {
+
+    color: white;
+    border-radius: 25px;
+    padding: 20px 0px;
+    & > * {
+        padding: 10px 30px;
+        text-align: center;
+    }
+
+    &__list {
+        .ant-tag {
+            color: white;
+            background-color: #304973;
+            border: 1px solid #304973;
+            margin: 5px;
+        }
+    }
+}
