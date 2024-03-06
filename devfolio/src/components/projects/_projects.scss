@@ -1,0 +1,29 @@
+.projects {
+    background-color: #18243A;
+    margin: 2rem;
+    text-align: center;
+    font-size: 28px;
+    border-radius: 25px;
+}
+
+.project {
+    // border-radius: 25px;
+
+    &-cover {
+        border-radius: 10px 10px 0px 0px;
+
+        img {
+            border-radius: 10px 10px 0px 0px;
+        }
+    }
+
+    &-body {
+        border-radius: 0px 0px 10px 10px;
+        background-color: #304973;
+    }
+}
+
+// .project-body {
+//     
+//     // border-radius: 25px;
+// }

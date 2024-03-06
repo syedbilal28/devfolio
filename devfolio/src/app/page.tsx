@@ -10,8 +10,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <Layout style={{ "height": "100vh", "padding": "50px" }} className='home-page'>
-        <Sider width={300} className='home-page__sider'>
+    <Layout style={{ "padding": "25px" }} className='home-page'>
+        <Sider width={220} className='home-page__sider'>
           <Flex justify="center" align="center" vertical style={{"height": "100%"}}>
             <InfoSideBar/>
           </Flex>
@@ -21,7 +21,7 @@ export default function Home() {
             <Heading/>
             <Image 
             src="/image 5.png"
-            width="600"
+            width="750"
             height="100"
             alt="demo"
             />
@@ -29,7 +29,7 @@ export default function Home() {
           <SocialLinks/>
           <Projects/>
         </Content>
-        <Sider width={300}>
+        <Sider width={250}>
           <Flex justify="center" align="center" vertical style={{"height": "100%"}}>
             <SkillsBar/>
           </Flex>
