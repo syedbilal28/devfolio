@@ -31,7 +31,7 @@ export default function Home() {
               </Flex>
             </Sider>
             <Content>
-              <Flex justify='center' align='center' vertical style={{"height": "100%"}}>
+              <Flex justify='center' align='center' vertical style={{"height": "100%"}} className='center-content'>
                 <Heading/>
                 <Image
                 src="/image 5.png"
@@ -43,7 +43,7 @@ export default function Home() {
                 <Projects/>
               </Flex>
             </Content>
-            <Sider width={250}>
+            <Sider width={270} className='skills-side'>
               <Flex justify="center" align="center" vertical style={{"height": "100%"}}>
                 <SkillsBar/>
               </Flex>

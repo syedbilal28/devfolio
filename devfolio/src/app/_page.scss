@@ -2,18 +2,29 @@
 .home-page {
     background-color: #0C121D;
     background-image: url("/hero-bg.jpg");
-    height: 100vh;
+    height: 100%;
 
     &__sider {
         background-color: transparent !important;
     }
 
+    .skills-side {
+        background-color: #18243A;
+        border-radius: 25px;
+    }
+
     color: white;
+
+    .center-content {
+        position: sticky;
+        z-index: 1;
+        // margin: 50px 0px;
+    }
 }
 .sticky {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
 }
 
 .bubbles {

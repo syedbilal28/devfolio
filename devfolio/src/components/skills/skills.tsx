@@ -5,7 +5,7 @@ export const SkillsBar: React.FC = () => {
     return (
         <Flex gap="middle" align="start" vertical className='skills-bar'>
             <Flex justify="center" align="center" vertical>
-                <p>Skills</p>
+                <h2>Skills</h2>
                 <div className='skills-bar__list'>
                     <Tag>
                         Python

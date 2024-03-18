@@ -8,12 +8,20 @@
         text-align: center;
     }
 
+    h2 {
+        font-size: 24px;
+        margin: 10px 0px;
+    }
+
     &__list {
         .ant-tag {
-            color: white;
-            background-color: #304973;
-            border: 1px solid #304973;
+            color: black;
+            background-color: #fec544;
+            border: 1px solid #fec544;
             margin: 5px;
+            font-size: 16px;
+            font-weight: 470;
+            padding: 3px 5px;
         }
     }
 }

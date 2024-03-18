@@ -2,28 +2,41 @@
     background-color: #18243A;
     margin: 2rem;
     text-align: center;
-    font-size: 28px;
     border-radius: 25px;
-}
+    padding: 30px;
 
-.project {
-    // border-radius: 25px;
+    .title {
+        margin-bottom: 30px;
+        font-size: 26px;
+    }
 
-    &-cover {
-        border-radius: 10px 10px 0px 0px;
+    .project {
 
-        img {
+        max-width: 500px;
+        &-cover {
             border-radius: 10px 10px 0px 0px;
+
+            img {
+                border-radius: 10px 10px 0px 0px;
+            }
+        }
+
+        &-body {
+            border-radius: 0px 0px 10px 10px;
+            background-color: #304973;
+            text-align: left;
+            padding: 20px;
+
+            .project-title {
+                font-size: 18px;
+            }
+            .project-skills {
+                .ant-tag {
+                    color: black;
+                    background-color: #fec544;
+                    border: 1px solid #fec544;                }
+            }
         }
     }
 
-    &-body {
-        border-radius: 0px 0px 10px 10px;
-        background-color: #304973;
-    }
 }
-
-// .project-body {
-//     
-//     // border-radius: 25px;
-// }
