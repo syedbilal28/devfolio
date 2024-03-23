@@ -5,6 +5,7 @@ import { Flex } from "antd";
 export const Projects: React.FC = () => {
     return (
         <div className="projects">
+            {/* Dummy commit */}
             <h2 className="title">Projects</h2>
             <Flex gap="large" align="center" justify="center" wrap="wrap">
                 <Project
