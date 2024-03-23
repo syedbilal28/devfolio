@@ -3,7 +3,7 @@ import { Projects } from '@/components/projects/projects'
 import { SkillsBar } from '@/components/skills/skills'
 import { SocialLinks } from '@/components/socials/social-links'
 import InfoSideBar from '@/components/ui/info-bar'
-import { Col, Flex, Layout, Menu, Row } from 'antd'
+import { Flex, Layout } from 'antd'
 import Sider from 'antd/es/layout/Sider'
 import { Content } from 'antd/es/layout/layout'
 import Image from "next/image";
@@ -32,7 +32,7 @@ export default function Home() {
             </Sider>
             <Content>
               <Flex justify='center' align='center' vertical style={{"height": "100%"}} className='center-content'>
-                <Heading/>
+                <Heading/> 
                 <Image
                 src="/image 5.png"
                 width="750"
