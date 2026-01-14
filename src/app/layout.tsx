@@ -6,8 +6,8 @@ import "../components/styles/styles.scss"
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Syed Bilal Ali - Full Stack Developer',
-  description: 'Full Stack Developer @ Meistery Global Team | Former Google DSC Development Lead | Python | Django | Flask | React | Nextjs | Vue',
+  title: 'Syed Bilal Ali - Developer & Systems Analyst',
+  description: 'Developer & Systems Analyst @ Neural Lab | Former Google DSC Development Lead | Python | Django | Flask | React | Nextjs | Vue',
 }
 
 export default function RootLayout({

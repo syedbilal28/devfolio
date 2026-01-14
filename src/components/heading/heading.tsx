@@ -7,13 +7,15 @@ export const Heading: React.FC = () => (
     <div className="heading">
         <TypeAnimation
             sequence={[
-                "I am a Full Stack Developer",
+                "I am a Developer & Systems Analyst",
                 1000,
-                "I work with Python and Typescript",
+                "I code solutions to complex problems",
                 1000,
-                "I love designing databases",
+                "I build scalable systems",
                 1000,
-                "I love creating applications",
+                "I analyze, design, and develop",
+                1000,
+                "I turn requirements into working code",
                 1000
             ]}
             wrapper="span"

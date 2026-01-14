@@ -5,15 +5,18 @@ import './_expertise-section.scss';
 
 export const ExpertiseSection: React.FC = () => {
     const expertise = [
-        "Full Stack Development",
-        "Web Development",
-        "Data Architecture and Engineering",
-        "Software Architecture",
-        "RESTful APIs",
-        "Microservices",
-        "Design Patterns",
-        "Problem-solving",
-        "Analytics with Python"
+        "Systems Analysis & Design",
+        "Product Ownership",
+        "Cross-Functional Leadership",
+        "Problem Solving & Root Cause Analysis",
+        "Requirements Gathering & Documentation",
+        "Process Optimization",
+        "Stakeholder Management",
+        "Technical Architecture",
+        "Agile & Scrum Methodologies",
+        "Data Analysis & Insights",
+        "System Integration",
+        "Quality Assurance & Testing"
     ];
 
     return (
@@ -21,7 +24,8 @@ export const ExpertiseSection: React.FC = () => {
             <div className="expertise-container">
                 <h2 className="expertise-title">Areas of Expertise</h2>
                 <p className="expertise-subtitle">
-                    Specialized knowledge and skills that drive successful project delivery
+                    Technical expertise combined with analytical thinking, product ownership, and cross-functional collaboration 
+                    to build robust, scalable solutions
                 </p>
                 <div className="expertise-grid">
                     {expertise.map((item, index) => (

@@ -7,11 +7,40 @@ import { ContactForm } from '@/components/contact/contact-form'
 import { ExpertiseSection } from '@/components/expertise/expertise-section'
 import { StatsSection } from '@/components/stats/stats-section'
 import { FloatingIcons } from '@/components/floating-icons/floating-icons'
+import { LoadingScreen } from '@/components/loading/loading-screen'
 import { Flex, Layout } from 'antd'
 import { Content } from 'antd/es/layout/layout'
 import Image from "next/image";
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Wait for fonts, images, and initial render to complete
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500); // Give enough time for everything to load
+
+    // Also check if page is fully loaded
+    if (document.readyState === 'complete') {
+      setTimeout(() => setIsLoading(false), 800);
+    } else {
+      window.addEventListener('load', () => {
+        setTimeout(() => setIsLoading(false), 800);
+      });
+    }
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('load', () => {});
+    };
+  }, []);
+
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+
   return (
     <Layout className='home-page'>
       <section className="sticky">
@@ -30,7 +59,6 @@ export default function Home() {
                     height={200}
                     className="profile-image"
                   />
-                  <div className="profile-badge">Available for Hire</div>
                 </div>
               </div>
               <div className="hero-text">
@@ -39,11 +67,12 @@ export default function Home() {
                   <Heading />
                 </div>
                 <p className="hero-description">
-                  Full Stack Developer @ Neural Lab | Former Google DSC Development Lead
+                  Developer & Systems Analyst @ Neural Lab | Former Google DSC Development Lead
                 </p>
                 <p className="hero-tagline">
-                  Building scalable web applications with Python, Django, and modern JavaScript frameworks. 
-                  Passionate about clean architecture, database design, and creating impactful solutions.
+                  A developer who thinks like a systems analyst. I analyze problems, design architectures, 
+                  and build scalable solutions using Python, Django, and modern JavaScript frameworks. 
+                  Combining technical expertise with cross-functional collaboration to deliver impactful products.
                 </p>
                 <SocialLinks />
                 <div className="hero-cta">

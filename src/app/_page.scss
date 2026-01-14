@@ -75,22 +75,6 @@
                         transform: scale(1.05);
                     }
                 }
-
-                .profile-badge {
-                    position: absolute;
-                    bottom: -10px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    background: linear-gradient(135deg, #fec544 0%, #ffd166 100%);
-                    color: #0C121D;
-                    padding: 0.5rem 1.5rem;
-                    border-radius: 20px;
-                    font-weight: 700;
-                    font-size: 0.85rem;
-                    box-shadow: 0 4px 15px rgba(254, 197, 68, 0.5);
-                    white-space: nowrap;
-                    animation: pulse 2s ease-in-out infinite;
-                }
             }
         }
 

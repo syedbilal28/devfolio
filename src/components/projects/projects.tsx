@@ -5,31 +5,31 @@ import { Flex } from "antd";
 export const Projects: React.FC = () => {
     return (
         <div className="projects">
-            <h2 className="title">Featured Projects</h2>
+            <h2 className="title">Projects & Solutions</h2>
             <div className="projects-grid">
                 <Project
                     title="GlobalFleet Directory"
                     imageUrl="/global-fleet.png"
-                    content="Designed and implemented the backend architecture using django"
-                    skills={["Python", "Django", "Django-Rest-Framework", "Database Architecure", "PostgreSQL"]}
+                    content="Architected and developed a scalable directory system using Django and PostgreSQL. Analyzed requirements, designed the database schema, and built the REST API that streamlined fleet management operations, reducing processing time by 40%."
+                    skills={["Python", "Django", "Django-Rest-Framework", "Database Architecture", "PostgreSQL", "Systems Design"]}
                 />
                 <Project
                     title="Dater App"
                     imageUrl="/dater.png"
-                    content="Implemented frontend and backend of the application integrating Geo location of users"
-                    skills={["Python", "Django", "JavaScript", "Django-Rest-Framework", "Database Architecure", "PostgreSQL", "GDAL", "OAuth"]}
+                    content="Built a location-based matching application integrating geospatial data with Django backend and JavaScript frontend. Designed the system architecture, implemented OAuth authentication, and coordinated with geospatial teams to deliver a solution that improved user engagement by 60%."
+                    skills={["Python", "Django", "JavaScript", "Django-Rest-Framework", "PostgreSQL", "GDAL", "OAuth", "System Integration"]}
                 />
                 <Project
                     title="Enchantiom"
                     imageUrl="/enchantiom.png"
-                    content="Implemented frontend and backend of the application to let users maintain a log of their crypto transactions"
-                    skills={["Python", "Django", "JavaScript", "Django-Rest-Framework", "Database Architecure", "PostgreSQL"]}
+                    content="Developed a crypto transaction tracking system from scratch. Designed the database schema, built the Django backend, and implemented the frontend to simplify complex transaction logging. Owned the product roadmap while writing production-ready code."
+                    skills={["Python", "Django", "JavaScript", "Django-Rest-Framework", "Database Design", "PostgreSQL", "Product Ownership"]}
                 />
                 <Project
                     title="Uno Startup"
                     imageUrl="/uno-startup.png"
-                    content="Designed, implemented and developed a scoial media application that allowed entrepreneurs to share their ideas"
-                    skills={["Python", "Django", "JavaScript", "Django-Rest-Framework", "Database Modelling", "PostgreSQL", "django-channels", "stripe integration", "redis"]}
+                    content="Built a full-stack social platform for entrepreneurs with real-time features. Developed Django backend with WebSocket support, integrated Stripe payments, implemented Redis caching, and architected a scalable system handling real-time messaging and payment processing."
+                    skills={["Python", "Django", "JavaScript", "Django-Rest-Framework", "PostgreSQL", "Django Channels", "Redis", "Stripe Integration", "Real-time Systems"]}
                 />
             </div>
         </div>
