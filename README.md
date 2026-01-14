@@ -29,14 +29,15 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Email Configuration
+## Environment Variables
 
-To enable the contact form email functionality, you need to set up environment variables:
-
-1. Create a `.env.local` file in the root directory
-2. Add your email configuration:
+Create a `.env.local` file in the root directory with the following:
 
 ```env
+# Site URL for SEO and metadata
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+
+# Email Configuration (for contact form)
 EMAIL_USER=your-email@gmail.com
 EMAIL_PASSWORD=your-app-password
 ```
@@ -48,6 +49,25 @@ EMAIL_PASSWORD=your-app-password
 4. Use the generated App Password as `EMAIL_PASSWORD`
 
 **Note:** Never commit your `.env.local` file to version control.
+
+## SEO Features
+
+This portfolio includes comprehensive SEO optimization:
+
+- ✅ **Meta Tags**: Title, description, keywords, Open Graph, Twitter Cards
+- ✅ **Structured Data**: JSON-LD schema for Person, Website, and ProfessionalService
+- ✅ **Sitemap**: Automatically generated at `/sitemap.xml`
+- ✅ **Robots.txt**: Configured at `/robots.txt`
+- ✅ **Semantic HTML**: Proper heading hierarchy and semantic elements
+- ✅ **Image Optimization**: Alt texts and priority loading for key images
+- ✅ **Canonical URLs**: Proper URL canonicalization
+
+### SEO Checklist:
+- [ ] Update `NEXT_PUBLIC_SITE_URL` in `.env.local` with your actual domain
+- [ ] Verify structured data at: https://search.google.com/test/rich-results
+- [ ] Submit sitemap to Google Search Console
+- [ ] Test Open Graph tags at: https://www.opengraph.xyz/
+- [ ] Verify Twitter Card at: https://cards-dev.twitter.com/validator
 
 ## Deploy on Vercel
 
