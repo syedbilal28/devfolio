@@ -29,7 +29,7 @@ export const Project: React.FC<ProjectProps> = ({title, content, skills, imageUr
                     src={imageUrl}
                     width={500}
                     height={300}
-                    alt="Project cover"
+                    alt={`${title} - Project showcase by Syed Bilal Ali`}
                 />
                 {isHovered && details && (
                     <div className="project-overlay">

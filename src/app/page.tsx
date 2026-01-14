@@ -54,10 +54,11 @@ export default function Home() {
                 <div className="profile-image-wrapper">
                   <Image
                     src="/profile-picture.png"
-                    alt="Syed Bilal Ali"
+                    alt="Syed Bilal Ali - Developer & Systems Analyst"
                     width={200}
                     height={200}
                     className="profile-image"
+                    priority
                   />
                 </div>
               </div>
