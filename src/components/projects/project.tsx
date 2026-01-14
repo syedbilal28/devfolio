@@ -23,7 +23,7 @@ export const Project: React.FC<ProjectProps> = ({title, content, skills, imageUr
                     <p className="project-title">{title}</p>
                     <p>{content}</p>
                     <Flex wrap="wrap" gap="small" className="project-skills">
-                        {skills.map((skill, index) => <Tag>{skill}</Tag>)}
+                        {skills.map((skill, index) => <Tag key={index}>{skill}</Tag>)}
                     </Flex>
                 </div>
             </div>
