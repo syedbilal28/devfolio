@@ -1,0 +1,45 @@
+.heading {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    span {
+        font-size: 2.25rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #fec544 0%, #ffffff 50%, #7a99d9 100%);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: gradient-shift 4s ease infinite;
+        display: inline-block;
+        letter-spacing: 1px;
+        text-shadow: 0 0 30px rgba(254, 197, 68, 0.3);
+        line-height: 1.4;
+        text-align: center;
+    }
+}
+
+@keyframes gradient-shift {
+    0%, 100% {
+        background-position: 0% center;
+    }
+    50% {
+        background-position: 100% center;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading span {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading span {
+        font-size: 1.5rem;
+    }
+}

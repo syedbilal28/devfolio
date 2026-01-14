@@ -29,8 +29,30 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
+## Email Configuration
+
+To enable the contact form email functionality, you need to set up environment variables:
+
+1. Create a `.env.local` file in the root directory
+2. Add your email configuration:
+
+```env
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASSWORD=your-app-password
+```
+
+### For Gmail:
+1. Enable 2-Step Verification on your Google account
+2. Generate an App Password: https://myaccount.google.com/apppasswords
+3. Use your Gmail address as `EMAIL_USER`
+4. Use the generated App Password as `EMAIL_PASSWORD`
+
+**Note:** Never commit your `.env.local` file to version control.
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+When deploying, make sure to add the `EMAIL_USER` and `EMAIL_PASSWORD` environment variables in your Vercel project settings.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

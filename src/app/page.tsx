@@ -1,53 +1,107 @@
+'use client';
 import { Heading } from '@/components/heading/heading'
 import { Projects } from '@/components/projects/projects'
 import { SkillsBar } from '@/components/skills/skills'
 import { SocialLinks } from '@/components/socials/social-links'
-import InfoSideBar from '@/components/ui/info-bar'
+import { ContactForm } from '@/components/contact/contact-form'
+import { ExpertiseSection } from '@/components/expertise/expertise-section'
+import { StatsSection } from '@/components/stats/stats-section'
+import { FloatingIcons } from '@/components/floating-icons/floating-icons'
+import { LoadingScreen } from '@/components/loading/loading-screen'
 import { Flex, Layout } from 'antd'
-import Sider from 'antd/es/layout/Sider'
 import { Content } from 'antd/es/layout/layout'
 import Image from "next/image";
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Wait for fonts, images, and initial render to complete
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500); // Give enough time for everything to load
+
+    // Also check if page is fully loaded
+    if (document.readyState === 'complete') {
+      setTimeout(() => setIsLoading(false), 800);
+    } else {
+      window.addEventListener('load', () => {
+        setTimeout(() => setIsLoading(false), 800);
+      });
+    }
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('load', () => {});
+    };
+  }, []);
+
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+
   return (
-    <Layout style={{ "padding": "25px" }} className='home-page'>
+    <Layout className='home-page'>
       <section className="sticky">
-          <div className="bubbles">
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-          </div>
+          <FloatingIcons />
         </section>
-            <Sider width={220} className='home-page__sider'>
-              <Flex justify="center" align="center" vertical style={{"height": "100%"}}>
-                <InfoSideBar/>
-              </Flex>
-            </Sider>
-            <Content>
-              <Flex justify='center' align='center' vertical style={{"height": "100%"}} className='center-content'>
-                <Heading/> 
-                <Image
-                src="/image 5.png"
-                width="750"
-                height="100"
-                alt="demo"
-                />
-                <SocialLinks/>
-                <Projects/>
-              </Flex>
-            </Content>
-            <Sider width={270} className='skills-side'>
-              <Flex justify="center" align="center" vertical style={{"height": "100%"}}>
-                <SkillsBar/>
-              </Flex>
-            </Sider>
+        <Content className='main-content'>
+          {/* Hero Section */}
+          <section className="hero-section">
+            <div className="hero-content">
+              <div className="hero-profile">
+                <div className="profile-image-wrapper">
+                  <Image
+                    src="/profile-picture.png"
+                    alt="Syed Bilal Ali"
+                    width={200}
+                    height={200}
+                    className="profile-image"
+                  />
+                </div>
+              </div>
+              <div className="hero-text">
+                <h1 className="hero-name">Syed Bilal Ali</h1>
+                <div className="hero-title">
+                  <Heading />
+                </div>
+                <p className="hero-description">
+                  Developer & Systems Analyst @ Neural Lab | Former Google DSC Development Lead
+                </p>
+                <p className="hero-tagline">
+                  A developer who thinks like a systems analyst. I analyze problems, design architectures, 
+                  and build scalable solutions using Python, Django, and modern JavaScript frameworks. 
+                  Combining technical expertise with cross-functional collaboration to deliver impactful products.
+                </p>
+                <SocialLinks />
+                <div className="hero-cta">
+                  <ContactForm />
+                </div>
+                <div className="scroll-indicator">
+                  <div className="scroll-text">Scroll to explore</div>
+                  <div className="scroll-arrow">↓</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Stats Section */}
+          <StatsSection />
+
+          {/* Skills Section */}
+          <section className="skills-section">
+            <SkillsBar />
+          </section>
+
+          {/* Projects Section */}
+          <section className="projects-section">
+            <Projects />
+          </section>
+
+          {/* Expertise Section */}
+          <ExpertiseSection />
+        </Content>
     </Layout>
   )
 }

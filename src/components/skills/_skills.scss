@@ -1,27 +1,108 @@
 .skills-bar {
-
     color: white;
+    background: linear-gradient(135deg, rgba(24, 36, 58, 0.95) 0%, rgba(31, 46, 71, 0.95) 100%);
+    backdrop-filter: blur(10px);
     border-radius: 25px;
-    padding: 20px 0px;
+    padding: 3rem;
+    border: 1px solid rgba(254, 197, 68, 0.2);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    margin: 2rem 0;
+
     & > * {
-        padding: 10px 30px;
+        padding: 0;
         text-align: center;
     }
 
     h2 {
-        font-size: 24px;
-        margin: 10px 0px;
+        font-size: 3rem;
+        margin-bottom: 2.5rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #fec544 0%, #7a99d9 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        letter-spacing: 1px;
     }
 
     &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        
         .ant-tag {
-            color: black;
-            background-color: #fec544;
-            border: 1px solid #fec544;
-            margin: 5px;
-            font-size: 16px;
-            font-weight: 470;
-            padding: 3px 5px;
+            color: #0C121D;
+            background: linear-gradient(135deg, #fec544 0%, #ffd166 100%);
+            border: none;
+            margin: 0;
+            font-size: 0.95rem;
+            font-weight: 700;
+            padding: 8px 18px;
+            border-radius: 10px;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 3px 10px rgba(254, 197, 68, 0.3);
+            cursor: default;
+            text-transform: capitalize;
+            letter-spacing: 0.3px;
+
+            &:hover {
+                transform: translateY(-5px) scale(1.1) rotate(2deg);
+                box-shadow: 0 8px 20px rgba(254, 197, 68, 0.5);
+                background: linear-gradient(135deg, #ffd166 0%, #fec544 100%);
+                z-index: 10;
+            }
+
+            // Categorize by color intensity
+            &:nth-child(3n+1) {
+                background: linear-gradient(135deg, #fec544 0%, #ffd166 100%);
+            }
+
+            &:nth-child(3n+2) {
+                background: linear-gradient(135deg, #7a99d9 0%, #9bb5e8 100%);
+            }
+
+            &:nth-child(3n+3) {
+                background: linear-gradient(135deg, #ff6b9d 0%, #ff8fb3 100%);
+            }
+        }
+    }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+    .skills-bar {
+        padding: 2rem 1.5rem;
+        margin: 1rem 0;
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        &__list {
+            gap: 0.75rem;
+            
+            .ant-tag {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-bar {
+        padding: 1.5rem 1rem;
+        
+        h2 {
+            font-size: 1.75rem;
+        }
+        
+        &__list {
+            .ant-tag {
+                font-size: 0.8rem;
+                padding: 5px 12px;
+            }
         }
     }
 }

@@ -1,0 +1,110 @@
+.expertise-section {
+    padding: 4rem 2rem;
+    margin: 3rem 0;
+    background: linear-gradient(135deg, rgba(24, 36, 58, 0.6) 0%, rgba(31, 46, 71, 0.6) 100%);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    border: 1px solid rgba(254, 197, 68, 0.2);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+
+    .expertise-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .expertise-title {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, #fec544 0%, #7a99d9 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        letter-spacing: 1px;
+    }
+
+    .expertise-subtitle {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 3rem;
+        font-weight: 400;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .expertise-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .expertise-item {
+        background: linear-gradient(135deg, rgba(24, 36, 58, 0.9) 0%, rgba(31, 46, 71, 0.9) 100%);
+        padding: 1.5rem;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border: 2px solid rgba(254, 197, 68, 0.2);
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        color: rgba(255, 255, 255, 0.95);
+        font-weight: 500;
+        font-size: 1.05rem;
+
+        &:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: #fec544;
+            box-shadow: 0 12px 30px rgba(254, 197, 68, 0.3);
+            background: linear-gradient(135deg, rgba(24, 36, 58, 1) 0%, rgba(31, 46, 71, 1) 100%);
+        }
+
+        .expertise-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        span {
+            text-align: left;
+            flex: 1;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .expertise-section {
+        padding: 2rem 1.5rem;
+        margin: 2rem 0;
+
+        .expertise-title {
+            font-size: 2rem;
+        }
+
+        .expertise-subtitle {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .expertise-grid {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .expertise-item {
+            padding: 1.25rem;
+            font-size: 1rem;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .expertise-section {
+        padding: 1.5rem 1rem;
+
+        .expertise-title {
+            font-size: 1.75rem;
+        }
+    }
+}
